@@ -1,0 +1,35 @@
+/* Announcement block */
+
+.announcement {
+  background-color: #ffd7d7;
+}
+
+.announcement__wrapper > * {
+  padding: 8px;
+}
+
+.announcement__wrapper {
+  padding: 0 8px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.announcement__icon {
+  flex-shrink: 0;
+  padding-right: 0;
+  line-height: 1;
+}
+
+.announcement__icon img {
+  max-width: 22px;
+  max-height: 25px;
+}
+
+/* Announcement block ends */
