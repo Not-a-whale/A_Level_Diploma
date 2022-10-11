@@ -147,6 +147,7 @@ p {
   font-size: 16px;
   line-height: 24px;
   color: var(--color-text);
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -162,6 +163,7 @@ h3,
 h4,
 h5 {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 h1 {
@@ -336,12 +338,70 @@ button.small-button {
 }
 
 button.big-button--white {
-  background-color: var(--color-page-bg) !important;
-  color: var(--color-text) !important;
+  background-color: var(--color-page-bg);
+  color: var(--color-text);
   text-transform: uppercase;
   border: none;
   outline: none;
 }
+
+button.medium-button {
+  width: 52px;
+  height: 38px;
+  background-color: var(--color-text);
+  color: var(--color--alternative);
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+}
+
+button.big-button {
+  min-width: 400px;
+  height: 46px;
+  background-color: var(--color-text);
+  color: var(--color-page-bg);
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+}
+
+button.small-button {
+  width: 116px;
+  height: 46px;
+  background-color: var(--color-text);
+  color: var(--color-page-bg);
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+button.big-button--white {
+  background-color: var(--color-page-bg);
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+}
+
+.wrapper {
+  padding-left: 8.5%;
+  padding-right: 8.5%;
+}
+
+.container__bottom {
+  margin-bottom: 74px;
+}
+
+.currency_en {
+}
+
+.currency_number_en {
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
 
 .wrapper {
   padding-left: 8.5%;
