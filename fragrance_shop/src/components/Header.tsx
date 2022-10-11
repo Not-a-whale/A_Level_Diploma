@@ -76,7 +76,7 @@ export const Header = () => {
                 </div>
             </div>
             <div className="header__center">
-                <img loading="lazy" src={main_logo} alt="" />
+                <a href="/"><img loading="lazy" src={main_logo} alt="" /></a>
             </div>
             <div className="header__right">
                 <div className="flag flag__desktop">
@@ -102,9 +102,9 @@ export const Header = () => {
                     </ul>
                 </div>
                 <div className="logging logging__desktop">
-                    <a href="./login-en.html" className="logging__login">Login</a>
+                    <a href="/login" className="logging__login">Login</a>
                     <p className="logging__text">/</p>
-                    <a href="./login-en.html" className="logging__sign-up">Sign up</a>
+                    <a href="/login" className="logging__sign-up">Sign up</a>
                 </div>
                 <div className="shopping-cart">
                     <img loading="lazy" src={shopping_cart_icon} alt="shopping cart icon"
@@ -120,24 +120,24 @@ export const Header = () => {
                 <img src={mobile_nav_pic} alt="mobile nav pic" />
             </div>
             <div className="logging logging__mobile">
-                <a href="./login-en.html" className="logging__login">Login</a>
+                <a href="./login" className="logging__login">Login</a>
                 <p className="logging__text">/</p>
-                <a href="./login-en.html" className="logging__sign-up">Sign up</a>
+                <a href="./login" className="logging__sign-up">Sign up</a>
             </div>
             <nav className="header__desktop-nav">
                 <ul className="main-menu">
                     <li className="main-menu__item">
-                        <a href="/home" className="main-menu__link">home</a>
+                        <a href="/" className="main-menu__link">home</a>
                     </li>
                     <li className="main-menu__item" id="mainMenuDropDownListItem" onMouseOver={handleMouseOver}>
                         <a className="main-menu__link">Shop beauty</a>
                         <img loading="lazy" src={arrow_down} alt="arrow down" />
                     </li>
                     <li className="main-menu__item">
-                        <a href="./blog-en.html" className="main-menu__link">Blog</a>
+                        <a href="/blog" className="main-menu__link">Blog</a>
                     </li>
                     <li className="main-menu__item">
-                        <a href="./blog-en.html" className="main-menu__link">About us</a>
+                        <a href="/blog" className="main-menu__link">About us</a>
                     </li>
                     <li className="main-menu__item">
                         <a href="/theme-features" className="main-menu__link">Theme features</a>

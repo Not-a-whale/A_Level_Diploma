@@ -162,7 +162,7 @@ const ProductsSlider = (props: {props: IProduct[]}) => {
             }
         </div>
         <div className="just-dropped__row-low carousel__row-low">
-            <a href="./collection-en.html" className="just-dropped__link carousel__link">View Collection</a>
+            <a href="/collection" className="just-dropped__link carousel__link">View Collection</a>
             <div className="just-dropped__arrows">
                 <div className="just-dropped__arrow just-dropped__arrow-left">
                     <img loading="lazy" src={arrow_left} alt="arrow left" className="" />

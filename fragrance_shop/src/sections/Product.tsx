@@ -3,7 +3,7 @@ import plus from '../assets/img/icon/plus.svg';
 import icons8_iphone_spinner from '../assets/img/icon/icons8-iphone-spinner.gif';
 
 const Product = (props: {props: IProduct}) => {
-    return (<a href={'product/' + props.props.id} className={`just-dropped__item carousel__item carousel__item--${props.props.id}`}>
+    return (<a href={'product/' + props.props.id} className={`just-dropped__item carousel__item carousel__item--${props.props.id} col-lg-3 col-sm-6 col-md-6 my-4`}>
         <div className="just-dropped__img-container carousel__img-container">
             {props.props.price_discount ? <div
                 className="just-dropped__badge just-dropped__badge--sale carousel__badge carousel__badge--sale">Sale</div> : ""}

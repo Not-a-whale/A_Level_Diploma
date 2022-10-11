@@ -36,7 +36,7 @@ const MainBlog = () => {
             </div>
             <div className="row main_blog__row main_blog__row--bottom d-flex justify-content-center flex-nowrap mt-md-5">
                 <div className="medium-button my-auto">
-                    <a href="./blog-en.html" className="text-white">View more</a>
+                    <a href="/blog" className="text-white">View more</a>
                 </div>
             </div>
         </div>
