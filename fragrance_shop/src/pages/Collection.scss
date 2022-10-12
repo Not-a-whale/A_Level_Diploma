@@ -8,23 +8,32 @@
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
   url("../assets/img/second_banner_image.jpg") center 30% no-repeat;
   background-size: cover;
+
+  h1 {
+    position: absolute;
+    padding: 32px;
+    bottom: 0;
+    max-width: 400px;
+    z-index: 7;
+  }
+
+  h2.text-left {
+    text-align: left;
+    padding: 0 0 0 70px;
+  }
+
+  h2.text-block__heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .carousel__item {
   text-decoration: none;
-}
-
-h1 {
-  position: absolute;
-  padding: 32px;
-  bottom: 0;
-  max-width: 400px;
-  z-index: 7;
-}
-
-h2.text-left {
-  text-align: left;
-  padding: 0 0 0 70px;
 }
 
 .main-sale__parallax {
@@ -34,15 +43,6 @@ h2.text-left {
   background-size: cover;
   position: relative;
   height: 100%;
-}
-
-h2.text-block__heading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
 }
 
 .items-grid {

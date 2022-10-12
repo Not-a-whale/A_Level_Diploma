@@ -40,13 +40,20 @@ export const Collection = () => {
     return (<div>
         <Announcement />
         <Header />
+        <section className="collection__banner">
+            <h1>All products</h1>
+        </section>
         <Breadcrumbs />
         <CollectionControls />
         <div className="container-fluid" id="overallContainer">
-            <div className="row productsContainer" id="productsRowContainer-1">
+            <div className="row productsContainer px-4" id="productsRowContainer-1">
                 {
                     products.map((product, index) => {
-                        return (<Product props={ product }/>)
+                        let props = {
+                            product,
+                            isCollection: true
+                        }
+                        return (<Product { ...props }/>)
                     })
                 }
             </div>

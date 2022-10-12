@@ -141,8 +141,12 @@ const ProductsSlider = (props: {props: IProduct[]}) => {
             {shuffleArr.map((item, index) => {
                 return (<div className="carousel__container">
                     {shuffleArr[index].map((product, prodIndex) => {
+                        let props = {
+                            product: product,
+                            isCollection: false
+                        }
                         return (
-                            <Product props={product} />
+                            <Product {...props} />
                         )
                     })}
                 </div>)
@@ -153,8 +157,12 @@ const ProductsSlider = (props: {props: IProduct[]}) => {
             {shuffleArrMobile.map((item, index) => {
                 return (<div className="carousel__container">
                     {shuffleArrMobile[index].map((product, prodIndex) => {
+                        let props = {
+                            product: product,
+                            isCollection: false
+                        }
                         return (
-                            <Product props={product} />
+                            <Product {...props} />
                         )
                     })}
                 </div>)

@@ -5,7 +5,7 @@ import three_three from '../assets/img/icon/3x3.svg'
 
 export const CollectionControls = () => {
     return (
-    <div className="coninainer-fluid">
+    <div className="coninainer-fluid my-4">
         <div className="row d-flex mx-4">
             <div className="sorting col-lg-7 col-md-12">
                 <div className="sorting__wrapper">

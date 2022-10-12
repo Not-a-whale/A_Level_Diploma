@@ -153,7 +153,7 @@ const MainSlider = () => {
                             <h4 className="text-block__heading">
                                 EXclusive
                             </h4>
-                            <h2 className="text-block__heading text-block__heading--large">the new & Natural</h2>
+                            <h2 className="text-block__heading text-block__heading--large my-2">the new & Natural</h2>
                             <p>Copy
                                 The award-winning, all-natural skincare range for a new, healthier you.</p>
                             <a className="text-block__link" href="./collection-en.html">Shop now</a>
@@ -167,7 +167,7 @@ const MainSlider = () => {
                             <h4 className="text-block__heading">
                                 Feature
                             </h4>
-                            <h2 className="text-block__heading text-block__heading--large">Skincare super sellers</h2>
+                            <h2 className="text-block__heading text-block__heading--large my-2">Skincare super sellers</h2>
                             <p>
                                 The most popular in skincare this Summer
                             </p>
@@ -181,7 +181,7 @@ const MainSlider = () => {
                             <h4 className="text-block__heading">
                                 TREND WATCH
                             </h4>
-                            <h2 className="text-block__heading text-block__heading--large">
+                            <h2 className="text-block__heading text-block__heading--large my-2">
                                 SUMMER BRIGHTS
                             </h2>
                             <p>
