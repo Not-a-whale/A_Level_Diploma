@@ -6,4 +6,8 @@ export const ProductsService = {
     getAllProducts: async () => {
         return axios.get( "http://localhost:3000/products");
     },
+
+    getSingleProduct(id: string) {
+        return axios.get( "http://localhost:3000/products/" + id);
+    }
 }
