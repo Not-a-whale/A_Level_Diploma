@@ -3,6 +3,7 @@ export interface IProduct {
     name: string;
     price: string;
     price_discount: string;
+    inStock: number,
     currency: string;
     description: {
         description_1: string;

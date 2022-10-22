@@ -2,9 +2,6 @@ import {useLocation} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {IProduct} from "../interfaces/IProduct";
 import {ProductsService} from "../services/ProductsService";
-import {Footer} from "../components/Footer";
-import Announcement from "../sections/Announcement";
-import Header from "../components/Header";
 import twitter_pic from "../assets/img/twitter.svg";
 import facebook from "../assets/img/facebook.svg";
 import pinterest_pic from "../assets/img/pinterest.png";
@@ -30,8 +27,6 @@ export const Product = () => {
         getProducts();
     }, []);
     return (<div>
-    <Announcement />
-    <Header />
     <Breadcrumbs />
        <section className="product">
             <div className="container-fluid">
@@ -47,9 +42,10 @@ export const Product = () => {
                         </div>
                         <div className="gift-card__bottom-selection product__selection">
                             {product?.img_links?.map((imgPath, index) => {
+                                const imgid = imgPath.split("/")[3];
                                 return (<div className={`gift-card__selection-item ${index === 0 ? 'circled-gift-card' : ''}`} onClick={id = index}>
                                     <img loading="lazy" src={`../img/just_dropped/${
-                                        id
+                                        imgid
                                     }/${index}.jpg`} alt="item 1 small" />
                                 </div>)
                             })}
@@ -66,9 +62,10 @@ export const Product = () => {
                         className="col-xl-4 col-lg-6 col-md-6 product__img product__section d-flex align-items-md-start align-items-lg-center justify-content-md-start">
                         {product?.img_links?.map((link, index) => {
                             if(index === 0) {
+                                const imgid = link.split("/")[3];
                                 return (
                                     <img loading="lazy" src={`../img/just_dropped/${
-                                        id
+                                        imgid
                                     }/0.jpg`} alt={"DESCRIPTION OF A PRODUCT IMG: " + index}
                                          id="mainProductImage" />)
                             }
@@ -101,6 +98,5 @@ export const Product = () => {
                 </a>
             </div>
         </section>
-        <Footer />
     </div>);
 }

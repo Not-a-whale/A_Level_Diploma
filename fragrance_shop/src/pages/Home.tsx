@@ -25,14 +25,8 @@ const Home = () => {
     useEffect(() => {
         const getProducts = async () => {
             try {
-                let productsArray = reactLocalStorage.getObject(LocalStorageKeysEnum.allProducts);
-                if(Object.values(productsArray).length > 0) {
+                    const productsArray = (await ProductsService.getAllProducts())?.data;
                     setProducts(productsArray as IProduct[]);
-                } else {
-                    productsArray = (await ProductsService.getAllProducts())?.data;
-                    reactLocalStorage.setObject(LocalStorageKeysEnum.allProducts, productsArray);
-                    setProducts(productsArray as IProduct[]);
-                }
             } catch (err) {
 
             }
@@ -41,8 +35,6 @@ const Home = () => {
     }, []);
     return (
         <div>
-            <Announcement />
-            <Header />
             <main className="main__content">
                 <MainSlider />
                 <ProductsSlider props={products} />
@@ -57,7 +49,6 @@ const Home = () => {
                 <Benefits />
                 <BannerLow />
             </main>
-            <Footer />
         </div>
     )
 }

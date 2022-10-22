@@ -7,7 +7,7 @@ import US_flag from '../assets/img/US_flag.png';
 import shopping_cart_icon from '../assets/img/shopping_cart_icon.svg';
 import search_icon from '../assets/img/search_icon.svg';
 
-export const Header = () => {
+export const Header = ({ numberOfItems }) => {
 
     const display = "display";
 
@@ -34,6 +34,11 @@ export const Header = () => {
 
     function HideElement(elem: any) {
         elem.classList.remove(display);
+    }
+
+    const handleCartClick = () => {
+        const overlay = document.getElementsByClassName('overlay');
+        overlay[0].classList.toggle('overlay-active');
     }
     return (<header className="header__root">
         <div className="header__top">
@@ -106,11 +111,11 @@ export const Header = () => {
                     <p className="logging__text">/</p>
                     <a href="/login" className="logging__sign-up">Sign up</a>
                 </div>
-                <div className="shopping-cart">
+                <div className="shopping-cart" onClick={() => handleCartClick()}>
                     <img loading="lazy" src={shopping_cart_icon} alt="shopping cart icon"
                          className="shopping-cart__icon" />
                     <span className="shopping-cart__number">
-                        2
+                        {numberOfItems}
                     </span>
                 </div>
             </div>

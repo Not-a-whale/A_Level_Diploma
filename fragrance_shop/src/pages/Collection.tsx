@@ -10,36 +10,34 @@ import {Breadcrumbs} from "../components/Breadcrumbs";
 import {CollectionControls} from "../components/CollectionControls";
 import {IProduct} from "../interfaces/IProduct";
 import {useEffect, useState} from "react";
-import {reactLocalStorage} from "reactjs-localstorage";
-import {LocalStorageKeysEnum} from "../enums/LocalStorageKeys.enum";
 import {ProductsService} from "../services/ProductsService";
 import Product from "../sections/Product";
+import {Pagination} from "../components/Pagination";
 
 
 export const Collection = () => {
     const [products, setProducts] = useState<IProduct[]>([]);
+    const [numberOfPages, setNumberOfPages] = useState<number>(1);
+
+    const getProducts = async (itemsOnPage: number = 10, page: number = 0) => {
+        try {
+            const productsResponse = (await ProductsService.getAllProductsWithPagination(itemsOnPage, page ? page + 1 : 1))?.data;
+            setProducts(productsResponse.products);
+            setNumberOfPages(productsResponse.pages);
+        } catch (err) {
+
+        }
+    }
 
     useEffect(() => {
-        const getProducts = async () => {
-            try {
-                let productsArray = reactLocalStorage.getObject(LocalStorageKeysEnum.allProducts);
-                if(Object.values(productsArray).length > 0) {
-                    setProducts(productsArray as IProduct[]);
-                } else {
-                    productsArray = (await ProductsService.getAllProducts())?.data;
-                    reactLocalStorage.setObject(LocalStorageKeysEnum.allProducts, productsArray);
-                    setProducts(productsArray as IProduct[]);
-                }
-            } catch (err) {
-
-            }
-        }
         getProducts();
     }, []);
 
+    const getItems = async (itemsOnPage: number, page: number) => {
+        await getProducts(itemsOnPage, page);
+    }
+
     return (<div>
-        <Announcement />
-        <Header />
         <section className="collection__banner">
             <h1>All products</h1>
         </section>
@@ -58,11 +56,11 @@ export const Collection = () => {
                 }
             </div>
         </div>
+        <Pagination numberOfPages={numberOfPages} sendDataToParent={getItems}/>
         <section className="parallax-banner">
             <div className="parallax main-sale__parallax">
                 <h2 className="text-block__heading text-block__heading--large">up to 30% off selected brands</h2>
             </div>
         </section>
-        <Footer />
     </div>);
 }

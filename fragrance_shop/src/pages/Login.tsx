@@ -10,8 +10,6 @@ import './Login.scss'
 export const Login = () => {
     return (<div>
         <div>
-            <Announcement />
-            <Header />
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 offset-md-3 mt-md-5 mb-md-5">
@@ -44,7 +42,6 @@ export const Login = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     </div>);
 }

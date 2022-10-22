@@ -14,8 +14,6 @@ import blog_5 from '../assets/img/blog/5.png'
 
 export const Blog = () => {
     return (<div>
-        <Announcement />
-        <Header />
         <div className="container">
             <div className="row">
                 <div className="col-12">
@@ -110,6 +108,5 @@ export const Blog = () => {
                 </div>
             </div>
         </div>
-        <Footer />
     </div>);
 }
